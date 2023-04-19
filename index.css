@@ -1,0 +1,566 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    position: relative;
+    top: 11.5rem;
+    right: 1rem;
+}
+
+.single-chart {
+    width: 250px;
+    transform: rotate(21deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 1;
+    stroke-linecap: round;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    animation: progress 2s ease-out infinite;
+}
+
+.circle2 {
+    fill: none;
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    animation: progress 2s ease-out infinite;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.circular-chart.green .circle2 {
+    stroke: #70a84b;
+}
+
+.circular-chart.yellow .circle {
+    stroke: #fcd329;
+}
+
+.no-rotate {
+    fill: #666;
+    font-family: 'GothamPro-Light';
+    font-size: 2rem;
+}
+
+.diagramma {
+    display: flex;
+    justify-content: center;
+}
+
+.arrow {
+    font-size: 0.7rem;
+    transform: scaleX(1.8);
+    display: inline-block;
+    position: relative;
+    bottom: 0.2rem;
+}
+
+/* Текст диаграммы */
+.loyalty {
+    text-align: center;
+    position: relative;
+    bottom: 5.3rem;
+
+}
+
+.percents-value {
+    font-family: 'GothamPro-Light';
+    z-index: 2;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    font-size: 2.9rem;
+    position: relative;
+    left: 0.5rem;
+}
+
+.tenths-percent {
+    display: inline-block;
+    position: relative;
+    right: 1rem;
+}
+
+.tenths {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.percents-value {
+    color: #555555;
+}
+
+.percent-sign {
+    display: block;
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+.text-loyalty1 {
+    color: #555555;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.text-loyalty2 {
+    color: #fcd329;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.text-loyalty3 {
+    font-size: 0.7rem;
+    color: rgb(183, 178, 195);
+}
+
+.text-loyalty4 {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    color: #70a74b;
+}
+
+.loyalty-flag {
+    position: relative;
+    bottom: 0.8rem;
+    left: 0.1rem;
+}
+
+/* Линии */
+.lines {
+    position: relative;
+    bottom: 0.2rem;
+    left: 0.45rem;
+}
+
+.line-top {
+    position: relative;
+    top: 7rem;
+    z-index: 1;
+
+    border: 2px solid #c4c4c4;
+    border-right: none;
+    border-top-left-radius: 8px;
+    border-bottom: none;
+
+    width: 26px;
+    height: 13.1rem;
+}
+
+.line-bot {
+    position: relative;
+    top: 8.25rem;
+    z-index: 1;
+
+    border: 2px solid #c4c4c4;
+    border-right: none;
+    border-bottom-left-radius: 6px;
+    border-top: none;
+
+    width: 10px;
+    height: 11px;
+}
+
+.plus {
+    color: #b1b1b1;
+    position: relative;
+    bottom: 1.8rem;
+}
+
+.plus-line1 {
+    position: relative;
+    top: 8.535rem;
+    right: 0.325rem;
+
+    border: 2px solid #c4c4c4;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 12px;
+}
+
+.plus-line2 {
+    position: relative;
+    top: 8.1rem;
+
+    border: 2px solid #c4c4c4;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    height: 12px;
+}
+
+.line-middle {
+    position: relative;
+    top: 4.55rem;
+    left: 0.125rem;
+
+    border: 2px solid #c4c4c4;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 13px;
+}
+
+/* Блоки */
+.diagrams-bot {
+    display: block;
+    height: 130px;
+    width: 228px;
+}
+
+.dia-bot {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.dia-bot-name {
+    position: relative;
+    bottom: 0.1rem;
+
+    display: inline-block;
+    text-align: left;
+    font-size: 0.8rem;
+    margin-right: 0.6rem;
+    font-weight: 600;
+}
+
+.percents-count {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.bot-count-flag {
+    display: flex;
+    position: relative;
+    top: 0.2rem;
+}
+
+.bot-count {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 0.1rem;
+    color: #999999;
+}
+
+.dia-indicator {
+    display: inline-block;
+    width: 90px;
+    height: 33px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    position: relative;
+    bottom: 0.25rem;
+
+    border-color: #ececec;
+    background: #f9f9f9;
+}
+
+.inner-percent {
+    z-index: 22;
+    margin-left: auto;
+    margin-right: 0.2rem;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-top: auto;
+}
+
+/* Промоутеры-индикатор */
+.indicator-promoters1 {
+    display: flex;
+    height: 26px;
+    position: relative;
+    z-index: 0;
+}
+
+.indicator-promoters1::before {
+    content: '';
+    display: block;
+    background: #70a74b;
+    width: 31px;
+    height: 100%;
+    border-top-left-radius: 3px;
+    z-index: 0;
+}
+
+.indicator-promoters2 {
+    position: relative;
+    height: 7px;
+    z-index: 0;
+}
+
+.indicator-promoters2::before {
+    content: '';
+    display: block;
+    background: #b5d0a2;
+    width: 29px;
+    height: 100%;
+    border-bottom-left-radius: 3px;
+    z-index: 0;
+}
+
+/* Скептики-индикатор */
+.indicator-skeptics1 {
+    display: flex;
+    height: 26px;
+    position: relative;
+    z-index: 0;
+}
+
+.indicator-skeptics1::before {
+    content: '';
+    display: block;
+    background: #fbd229;
+    width: 32px;
+    height: 100%;
+    border-top-left-radius: 3px;
+    z-index: 0;
+}
+
+.indicator-skeptics2 {
+    position: relative;
+    height: 7px;
+    z-index: 0;
+}
+
+.indicator-skeptics2::before {
+    content: '';
+    display: block;
+    background: #fae691;
+    width: 28px;
+    height: 100%;
+    border-bottom-left-radius: 3px;
+    z-index: 0;
+}
+
+/* Критики-индикатор */
+.indicator-critics1 {
+    display: flex;
+    height: 26px;
+    position: relative;
+    z-index: 0;
+}
+
+.indicator-critics1::before {
+    content: '';
+    display: block;
+    background: #ed5243;
+    width: 26px;
+    height: 100%;
+    border-top-left-radius: 3px;
+    z-index: 0;
+}
+
+.indicator-critics2 {
+    position: relative;
+    height: 7px;
+    z-index: 0;
+}
+
+.indicator-critics2::before {
+    content: '';
+    display: block;
+    background: #f3a69e;
+    width: 31px;
+    height: 100%;
+    border-bottom-left-radius: 3px;
+    z-index: 0;
+}
+
+/* Gotham Pro */
+@font-face {
+    font-family: 'GothamPro-Black';
+    src: url('./fonts/gothampro-black.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampro-black.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampro-black.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampro-black.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampro-black.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampro-black.svg#gothampro-black') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'GothamPro-BlackItalic';
+    src: url('./fonts/gothampro-blackitalic.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampro-blackitalic.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampro-blackitalic.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampro-blackitalic.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampro-blackitalic.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampro-blackitalic.svg#gothampro-blackitalic') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'GothamPro-Bold';
+    src: url('./fonts/gothampro-bold.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampro-bold.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampro-bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampro-bold.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampro-bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampro-bold.svg#gothampro-bold') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'GothamPro-BoldItalic';
+    src: url('./fonts/gothampro-bolditalic.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampro-bolditalic.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampro-bolditalic.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampro-bolditalic.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampro-bolditalic.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampro-bolditalic.svg#gothampro-bolditalic') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'GothamPro-Italic';
+    src: url('./fonts/gothampro-italic.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampro-italic.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampro-italic.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampro-italic.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampro-italic.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampro-italic.svg#gothampro-italic') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'GothamPro-Light';
+    src: url('./fonts/gothampro-light.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampro-light.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampro-light.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampro-light.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampro-light.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampro-light.svg#gothampro-light') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'GothamPro-LightItalic';
+    src: url('./fonts/gothampro-lightitalic.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampro-lightitalic.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampro-lightitalic.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampro-lightitalic.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampro-lightitalic.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampro-lightitalic.svg#gothampro-lightitalic') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'GothamPro-Medium';
+    src: url('./fonts/gothampro-medium.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampro-medium.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampro-medium.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampro-medium.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampro-medium.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampro-medium.svg#gothampro-medium') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'GothamPro-MediumItalic';
+    src: url('./fonts/gothampro-mediumitalic.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampro-mediumitalic.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampro-mediumitalic.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampro-mediumitalic.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampro-mediumitalic.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampro-mediumitalic.svg#gothampro-mediumitalic') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'GothamProNarrow-Bold';
+    src: url('./fonts/gothampronarrow-bold.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampronarrow-bold.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampronarrow-bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampronarrow-bold.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampronarrow-bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampronarrow-bold.svg#gothampronarrow-bold') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'GothamProNarrow-Medium';
+    src: url('./fonts/gothampronarrow-medium.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('./fonts/gothampronarrow-medium.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('./fonts/gothampronarrow-medium.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/gothampronarrow-medium.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('./fonts/gothampronarrow-medium.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/gothampronarrow-medium.svg#gothampronarrow-medium') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
